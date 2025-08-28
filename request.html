@@ -1,9 +1,226 @@
-<form action ="" method="post">
-    <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for ="lname">Email:</label><br>
-  <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purdue Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+html{
+    background-color: #ebd99f;
+}
+nav{
+    width: 100%;
+    height: 45px;
+    background-color: #cfb991;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li a{
+    display:flex;
+    color: #ebd99f;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+
+nav li a:hover {
+    background-color: black;
+}
+
+.logo{
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+h1{
+    display: flex;
+    height: 100px;
+    background-color: #daaa00;
+    color: black;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+
+nav li a:hover {
+    background-color: black;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+  }
+  
+  .image-container img {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  }
+  
+  .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .label {
+    opacity: 1;
+  }
+    
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .gallery {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .image-container {
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover .label {
+      opacity: 1;
+    }
+
+    .form-wrapper {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-wrapper h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    form input[type="text"] {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form input[type="submit"] {
+      margin-top: 1.5em;
+      padding: 0.75em 1.5em;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="request.html">Request</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <div class="gallery">
+      <div class="image-container">
+        <img src="purduehandbook2.jpg" alt="Purdue hammer" />
+        <span class="label">Parents and family</span>
+      </div>
+      <div class="image-container">
+        <img src="purduehandbook1.jpg" alt="Purdue building" />
+        <span class="label">Center for career</span>
+      </div>
+      <div class="image-container">
+        <img src="purduehandbook3.jpg" alt="Purdue train" />
+        <span class="label">Career Success</span>
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+      <h2>Sign Up for Purdue Reminders</h2>
+      <form action="" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" />
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
