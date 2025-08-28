@@ -94,14 +94,16 @@ nav li a:hover {
       justify-content: center;
       padding: 2em;
       gap: 2em;
+      flex-direction: row;
     }
 
     .gallery {
       flex: 1;
-      min-width: 300px;
+      min-width: 400px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       gap: 1em;
+      flex-wrap: wrap;
     }
 
     .image-container {
@@ -109,10 +111,18 @@ nav li a:hover {
     }
 
     .image-container img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.image-container img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
 
     .label {
       position: absolute;
@@ -178,57 +188,58 @@ nav li a:hover {
 </head>
 <body>
 
-<h1>Shop Old Gold & Black</h1>
-    <nav>
-        <img src="assets/pete.jpg" alt="logo" class="logo">
-        <ul>
-           <li>
-            <a href="index.html">Home</a>
-           </li>
-           <li>
-            <a href="shop.html">Shop</a>
-           </li>
-           <li>
-            <a href="request.html">Request</a>
-           </li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="request.html">Request</a></li>
+    </ul>
+  </nav>
 
   <div class="main-content">
     <div class="gallery">
       <div class="image-container">
-        <img src="assets/purduehandbook2.jpg" alt="Purdue hammer" />
+        <img src="purduehandbook2.jpg" alt="Purdue hammer" />
         <span class="label">Parents and family</span>
       </div>
       <div class="image-container">
-        <img src="assets/purduehandbook1.jpg" alt="Purdue building" />
+        <img src="purduehandbook1.jpg" alt="Purdue building" />
         <span class="label">Center for career</span>
       </div>
       <div class="image-container">
-        <img src="assets/purduehandbook3.jpg" alt="Purdue train" />
+        <img src="purduehandbook3.jpg" alt="Purdue train" />
         <span class="label">Career Success</span>
+
+
+      </div>
+
+      <div class="form-wrapper">
+        <h2>Sign Up for Purdue Reminders</h2>
+        <form action="" method="post">
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname" />
+  
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname" />
+  
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+  
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </div>
-
-    <div class="form-wrapper">
-      <h2>Sign Up for Purdue Reminders</h2>
-      <form action="" method="post">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" />
-
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" />
-
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" />
-
-        <input type="submit" value="Submit" />
-      </form>
     </div>
-  </div>
+
+    
 
 </body>
 </html>
+
+
+
+
+
 
 
 
