@@ -130,3 +130,23 @@ img {
 @media only screen and (max-width: 300px) {
   .prev, .next,.caption {font-size: 11px}
 }
+
+/* HOME WRAPPER ####################################################### */
+
+.purdueWrapper {
+  max-width: 1000px;
+  margin: auto;
+  border: 3px solid #8e6f3e;
+  padding: 10px;
+  background-color: #DAAA00;
+  display: flex;
+
+}
+.asideWrapper {
+  max-width: 300px;
+  margin: auto;
+  border: 3px solid #8e6f3e;
+  padding: 10px;
+  background-color: #cfb991;
+  
+}
